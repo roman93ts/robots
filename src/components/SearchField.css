@@ -1,0 +1,13 @@
+.input {
+	text-align: center;
+	margin: 10px;
+	/*border: 1px solid black;*/
+}
+
+.input input {
+	font-size: 1.3em;
+	padding: 5px;
+	background-color:rgba(165,217,236,0.5);
+	border: 2px solid rgb(165,217,236);
+	border-radius: 5px;
+}

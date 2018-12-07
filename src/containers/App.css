@@ -1,0 +1,13 @@
+h1 {
+	text-align: center;
+	font-weight: 100;
+	font-size: 3em;
+	/*border: 1px solid black;*/
+	margin: 10px;
+	color: #ffa500;
+}
+
+.appLay {
+	display: grid;
+	grid-template-rows: auto auto 80vh;
+}
