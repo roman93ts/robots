@@ -8,6 +8,8 @@ h1 {
 }
 
 .appLay {
+	height: 100vh;
+	width: auto;
 	display: grid;
-	grid-template-rows: auto auto 80vh;
+	grid-template-rows: auto auto 1fr;
 }

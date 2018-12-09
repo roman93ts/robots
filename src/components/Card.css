@@ -1,12 +1,12 @@
 .card {
-	background: linear-gradient(to top left,rgba(234, 111, 55,0.3),rgba(128, 239, 236,0.3));
+	background: linear-gradient(to top left,rgba(234, 111, 55,0.7),rgba(128, 239, 236,0.7));
 	text-align: center;
 	display: inline-block;
-	border-radius: 30px;
+	border-radius: 50px;
 	margin: 10px;
 	transition: 0.5s all;
 	box-shadow: 0 0 15px rgb(0,0,0);
-	color: #ffa500;
+	color: black;
 	font-weight: 100;
 	font-size: 1.5em;
 }
