@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import CardPlate from '../components/CardPlate';
 import SearchField from '../components/SearchField';
+import ErrorBoundry from '../components/ErrorBoundry';
 
 class App extends Component {
 	constructor(){
@@ -40,7 +41,9 @@ class App extends Component {
 				<div className="appLay">
 					<h1>Bender Friends</h1>
 					<SearchField changeSearchField={this.onField}/>
-					<CardPlate array={newRobots}/>
+					<ErrorBoundry>
+						<CardPlate array={newRobots}/>
+					</ErrorBoundry>	
 				</div>
 			);
 		}
