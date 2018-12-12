@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
 import './App.css';
+import {connect} from 'react-redux';
 import CardPlate from '../components/CardPlate';
 import SearchField from '../components/SearchField';
 import ErrorBoundry from '../components/ErrorBoundry';
+import {setSearchField} from '../actions';
+
 
 class App extends Component {
 	constructor(){
@@ -50,4 +53,4 @@ class App extends Component {
 	}
 }
 
-export default App;
+export default connect()(App);
