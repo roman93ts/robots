@@ -23,16 +23,16 @@ class App extends Component {
 		super()
 		this.state = {
 			robots: [],
-			searchField: ''
+			// searchField: ''
 		}
 	}
 
-	onField = (event) => {
-		// const newValue = ;
-		this.setState({
-			searchField: event.target.value.toLowerCase()
-		})
-	}
+	// onField = (event) => {
+	// 	// const newValue = ;
+	// 	this.setState({
+	// 		searchField: event.target.value.toLowerCase()
+	// 	})
+	// }
 
 	componentDidMount(){
 		fetch("https://jsonplaceholder.typicode.com/users")
@@ -46,7 +46,7 @@ class App extends Component {
 
 	render(){
 		const newRobots = this.state.robots.filter(user => {
-			return user.name.toLowerCase().includes(this.state.searchField)	
+			return user.name.toLowerCase().includes(this.props.searchField)	
 		})
 		if (!this.state.robots.length){
 			return <h1>Loading...</h1>
@@ -54,7 +54,7 @@ class App extends Component {
 			return (
 				<div className="appLay">
 					<h1>Bender Friends</h1>
-					<SearchField changeSearchField={this.onField}/>
+					<SearchField changeSearchField={this.props.onField}/>
 					<ErrorBoundry>
 						<CardPlate array={newRobots}/>
 					</ErrorBoundry>	
