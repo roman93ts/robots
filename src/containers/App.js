@@ -6,6 +6,17 @@ import SearchField from '../components/SearchField';
 import ErrorBoundry from '../components/ErrorBoundry';
 import {setSearchField} from '../actions';
 
+const mapStateToProps = (state) => {
+	return {
+		searchField: state.searchField
+	}
+}
+
+const mapDispatchToProps = (dispatch) => {
+	return {
+		onField: (event) => dispatch(setSearchField(event.target.value))
+	}
+};
 
 class App extends Component {
 	constructor(){
@@ -17,9 +28,9 @@ class App extends Component {
 	}
 
 	onField = (event) => {
-		const newValue = event.target.value.toLowerCase();
+		// const newValue = ;
 		this.setState({
-			searchField: newValue
+			searchField: event.target.value.toLowerCase()
 		})
 	}
 
@@ -53,4 +64,4 @@ class App extends Component {
 	}
 }
 
-export default connect()(App);
+export default connect(mapStateToProps,mapDispatchToProps)(App);
