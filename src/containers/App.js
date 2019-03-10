@@ -1,66 +1,55 @@
 import React, {Component} from 'react';
-import './App.css';
 import {connect} from 'react-redux';
-import CardPlate from '../components/CardPlate';
-import SearchField from '../components/SearchField';
-import ErrorBoundry from '../components/ErrorBoundry';
-import {setSearchField} from '../actions';
+import './App.css';
+import CardList from '../components/CardList';
+import SearchBox from '../components/SearchBox';
+import Scroll from '../components/Scroll';
+import Header from '../components/Header';
+import ErrorBoundry from './ErrorBoundry';
 
-const mapStateToProps = (state) => {
+import { setSearchField, requestRobots } from '../actions';
+
+const mapStateToProps = state => {
 	return {
-		searchField: state.searchField
+		searchField: state.searchRobots.searchField,
+		robots: state.requestRobots.robots,
+		isPending: state.requestRobots.isPending,
+		error: state.requestRobots.error
 	}
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
 	return {
-		onField: (event) => dispatch(setSearchField(event.target.value))
+		onSearchField: event=> dispatch(setSearchField(event.target.value)),
+		onRequestRobots: () => dispatch(requestRobots())
 	}
-};
+}
 
 class App extends Component {
-	constructor(){
-		super()
-		this.state = {
-			robots: [],
-			// searchField: ''
-		}
-	}
+	
 
-	// onField = (event) => {
-	// 	// const newValue = ;
-	// 	this.setState({
-	// 		searchField: event.target.value.toLowerCase()
-	// 	})
-	// }
-
-	componentDidMount(){
-		fetch("https://jsonplaceholder.typicode.com/users")
-		.then(data => data.json())
-		.then(user => {
-			this.setState({
-				robots:user
-			})
-		})
+	componentDidMount() {
+		this.props.onRequestRobots();
 	}
 
 	render(){
-		const newRobots = this.state.robots.filter(user => {
-			return user.name.toLowerCase().includes(this.props.searchField)	
+		const {searchField, onSearchField, robots, isPending} = this.props;
+		let newRobots = robots.filter(el => {
+			return el.name.toLowerCase().includes(searchField.toLowerCase());
 		})
-		if (!this.state.robots.length){
-			return <h1>Loading...</h1>
-		} else {
-			return (
-				<div className="appLay">
-					<h1>Bender Friends</h1>
-					<SearchField changeSearchField={this.props.onField}/>
-					<ErrorBoundry>
-						<CardPlate array={newRobots}/>
-					</ErrorBoundry>	
+		return (
+				<div className = 'app'>
+					<Header />
+					<SearchBox searchField = {onSearchField}/>
+					<Scroll>
+					{isPending ? <h1>Loading...</h1> :
+						<ErrorBoundry>
+							<CardList robots = {newRobots}/>
+						</ErrorBoundry>
+					}
+					</Scroll>
 				</div>
-			);
-		}
+			)
 	}
 }
 
