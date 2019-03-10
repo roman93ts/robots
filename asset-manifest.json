@@ -1,13 +1,13 @@
 {
-  "main.css": "/robots/static/css/main.628082b9.chunk.css",
-  "main.js": "/robots/static/js/main.6d7988cf.chunk.js",
-  "main.js.map": "/robots/static/js/main.6d7988cf.chunk.js.map",
+  "main.css": "/robots/static/css/main.ac06342f.chunk.css",
+  "main.js": "/robots/static/js/main.55c3a48b.chunk.js",
+  "main.js.map": "/robots/static/js/main.55c3a48b.chunk.js.map",
   "runtime~main.js": "/robots/static/js/runtime~main.840e4d37.js",
   "runtime~main.js.map": "/robots/static/js/runtime~main.840e4d37.js.map",
   "static/js/2.789f3f8e.chunk.js": "/robots/static/js/2.789f3f8e.chunk.js",
   "static/js/2.789f3f8e.chunk.js.map": "/robots/static/js/2.789f3f8e.chunk.js.map",
   "index.html": "/robots/index.html",
-  "precache-manifest.24bea12b40cd9ea1a378bf2820698a34.js": "/robots/precache-manifest.24bea12b40cd9ea1a378bf2820698a34.js",
+  "precache-manifest.98f93bd73041e917e26b751147bd78f5.js": "/robots/precache-manifest.98f93bd73041e917e26b751147bd78f5.js",
   "service-worker.js": "/robots/service-worker.js",
-  "static/css/main.628082b9.chunk.css.map": "/robots/static/css/main.628082b9.chunk.css.map"
+  "static/css/main.ac06342f.chunk.css.map": "/robots/static/css/main.ac06342f.chunk.css.map"
 }
