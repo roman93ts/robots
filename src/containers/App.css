@@ -20,3 +20,7 @@ h1 {
 	font-size: 6rem;
 	font-family: 'Dosis', sans-serif;
 }
+
+@font-face {
+	font-display: swap;
+}
