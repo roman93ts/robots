@@ -1,5 +1,5 @@
 {
-  "name": "futurama",
+  "name": "robots",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,6 +20,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "homepage" : "https://roman93ts.github.io/robots",
   "browserslist": [
     ">0.2%",
     "not dead",
