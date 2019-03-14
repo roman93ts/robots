@@ -5,6 +5,7 @@ import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import Header from '../components/Header';
+import CounterButton from '../components/CounterButton';
 import ErrorBoundry from './ErrorBoundry';
 
 import { setSearchField, requestRobots } from '../actions';
@@ -41,6 +42,7 @@ class App extends Component {
 				<div className = 'app'>
 					<Header />
 					<SearchBox searchField = {onSearchField}/>
+					<CounterButton/>
 					<Scroll>
 					{isPending ? <h1>Loading...</h1> :
 						<ErrorBoundry>

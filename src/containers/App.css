@@ -2,7 +2,7 @@
 	text-align: center;
 	height: 100vh;
 	display: grid;
-	grid-template-rows: auto auto 1fr;
+	grid-template-rows: auto auto auto 1fr;
 }
 
 h1 {
@@ -20,7 +20,6 @@ h1 {
 	font-size: 6rem;
 	font-family: 'Dosis', sans-serif;
 }
-
 @font-face {
 	font-display: swap;
 }

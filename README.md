@@ -1,1 +1,2 @@
-react + redux
+## Simple Progressive Web Application
+## React + redux
