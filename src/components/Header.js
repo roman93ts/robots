@@ -6,7 +6,6 @@ class Header extends Component {
 	}
 
 	render(){
-		console.log('HEADER')
 		return <h1>Futurama</h1>
 	}
 }
