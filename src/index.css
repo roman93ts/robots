@@ -13,3 +13,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+@font-face {
+  font-family: 'Libre Barcode 39 Text';
+  font-display: swap;
+  src: local('Libre Barcode 39 Text'), url(https://fonts.gstatic.com/s/librebarcode39text/v8/sJoa3KhViNKANw_E3LwoDXvs5Un0HQ1vT-0H0h5K2dnIag.woff2)
+}
